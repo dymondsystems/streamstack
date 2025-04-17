@@ -1,1 +1,362 @@
-test5
+
+        
+<!doctype html>
+<html lang="en">
+  <head>
+     <!-- Primary Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="stackboard is the best bookmarking tool to save, organize, and access your favorite websites from anywhere. Sync across all devices with powerful search and tagging features.">
+    <meta name="keywords" content="bookmarking tool, save websites, online bookmarks, bookmark manager, organize bookmarks, sync bookmarks, web favorites">
+    
+   
+    
+ <title>stackbaord | organize what matters</title>
+	
+	<link rel="canonical" href="https://stackboard.pro/" />
+	
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="stackboard | organize what matters" />
+	<meta property="og:description" content="TechCrunch | stackboard is the best bookmarking tool to save, organize, and access your favorite websites from anywhere." />
+	<meta property="og:url" content="https://techcrunch.com/" />
+	<meta property="og:site_name" content="stackboard" />
+	<meta property="og:image" content="https://pbs.twimg.com/media/GoJWWqsXIAA28rQ?format=jpg&name=small" />
+	<meta content="summary_large_image" name="twitter:card" /><meta content="@ycombinator" name="twitter:site" /><meta content="https://pbs.twimg.com/media/GoJWWqsXIAA28rQ?format=jpg&name=small" name="twitter:image" />
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Font_Awesome_5_solid_th-large.svg/2048px-Font_Awesome_5_solid_th-large.svg.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Font_Awesome_5_solid_th-large.svg/2048px-Font_Awesome_5_solid_th-large.svg.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Font_Awesome_5_solid_th-large.svg/2048px-Font_Awesome_5_solid_th-large.svg.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Font_Awesome_5_solid_th-large.svg/2048px-Font_Awesome_5_solid_th-large.svg.png" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+    <style>
+    body {
+  padding-top: 5rem;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}  
+    </style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">stackboard</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+
+      <div class="starter-template">
+        <h1>Deep Dive: How Transformers Work (Mathematically) & How RLHF Fine-Tunes Models Like ChatGPT</h1>
+      </div>
+      <div class="container">
+       <h2 style="font-weight: 500; font-size: 22.86px; line-height: 1.5; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>1. How Transformers Work: The Math Behind LLMs</strong></h2>
+<p style="margin: 13.716px 0px; font-size: 16.002px; line-height: 28.575px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;">The transformer architecture (Vaswani et al., 2017) revolutionized AI by enabling models like GPT to process language in parallel (unlike older RNNs). Here's the mathematical breakdown:</p>
+<h3 style="font-weight: 500; font-size: 18.288px; line-height: 1.5; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>Key Components of a Transformer</strong></h3>
+<h4 style="font-weight: 500; font-size: 16.002px; line-height: 28.575px; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>(1) Input Embeddings &amp; Positional Encoding</strong></h4>
+<ul style="margin: 13.716px 0px; padding-left: 27.432px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif; font-size: 16.002px;">
+<li>
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;">Each word/token is converted to a&nbsp;<strong>d-dimensional vector</strong>&nbsp;(e.g., d=768 in GPT-3).</p>
+</li>
+<li style="margin-top: 4px;">
+<p style="margin: 0px 0px 4px; font-size: 16.002px; line-height: 28.575px;">Since transformers don't process words sequentially,&nbsp;<strong>positional encodings</strong>&nbsp;are added to give order information:</p>
+<div class="md-code-block md-code-block-dark" style="--ds-md-code-block-border-color: rgb(255 255 255); --ds-md-code-block-banner-wrap-background-color: #292a2d; --ds-md-code-banner-background-color: #404045; color: #ffffff; background: #181d28; --ds-md-code-block-border-radius: 12px; --ds-md-code-block-font-size: calc(1.143*11px); border-radius: 12px; font-size: 12.573px; line-height: 20.1168px; margin-bottom: 11.43px;">
+<div class="md-code-block-banner-wrap" style="background-color: #ffffff !important; position: sticky; top: 0px;">
+<div class="md-code-block-banner" style="background: none 0% 0% / auto repeat scroll padding-box border-box #404045; padding: 9.144px 13.716px; font-size: 12.573px; line-height: 12.573px; border-top-left-radius: 12px; border-top-right-radius: 12px; justify-content: space-between; display: flex;">
+<div class="md-code-block-infostring"></div>
+<div class="md-code-block-action" style="align-items: center; display: flex;">
+<div class="ds-markdown-code-copy-button" style="background-color: rgba(255, 255, 255, 0); color: inherit; cursor: pointer; border: none; margin: 0px; padding: 0px;">Copy</div>
+</div>
+</div>
+</div>
+<pre style="font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; overflow: auto; padding: 9.144px 13.716px; text-wrap-mode: wrap; word-break: break-all; margin: 0px !important;">PE(pos, 2i) = sin(pos / 10000^(2i/d))
+PE(pos, 2i+1) = cos(pos / 10000^(2i/d))</pre>
+</div>
+<p style="margin-top: 4px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;">where&nbsp;<code style="font-size: 0.875em; font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; background-color: #ececec; border-radius: 4px; padding: 0.15rem 0.3rem;">pos</code>&nbsp;= position in sentence,&nbsp;<code style="font-size: 0.875em; font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; background-color: #ececec; border-radius: 4px; padding: 0.15rem 0.3rem;">i</code>&nbsp;= dimension index.</p>
+</li>
+</ul>
+<h4 style="font-weight: 500; font-size: 16.002px; line-height: 28.575px; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>(2) Self-Attention Mechanism</strong></h4>
+<p style="margin: 13.716px 0px; font-size: 16.002px; line-height: 28.575px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;">The core innovation that lets words "pay attention" to other relevant words.</p>
+<p style="margin: 13.716px 0px; font-size: 16.002px; line-height: 28.575px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;">For each input vector&nbsp;<strong>x</strong>, transformers compute:</p>
+<ol start="1" style="margin: 13.716px 0px; padding-left: 27.432px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif; font-size: 16.002px;">
+<li>
+<p style="margin: 0px 0px 4px; font-size: 16.002px; line-height: 28.575px;"><strong>Queries (Q)</strong>,&nbsp;<strong>Keys (K)</strong>, and&nbsp;<strong>Values (V)</strong>&nbsp;matrices:</p>
+<div class="md-code-block md-code-block-dark" style="--ds-md-code-block-border-color: rgb(255 255 255); --ds-md-code-block-banner-wrap-background-color: #292a2d; --ds-md-code-banner-background-color: #404045; color: #ffffff; background: #181d28; --ds-md-code-block-border-radius: 12px; --ds-md-code-block-font-size: calc(1.143*11px); border-radius: 12px; font-size: 12.573px; line-height: 20.1168px; margin-bottom: 11.43px;">
+<div class="md-code-block-banner-wrap" style="background-color: #ffffff !important; position: sticky; top: 0px;">
+<div class="md-code-block-banner" style="background: none 0% 0% / auto repeat scroll padding-box border-box #404045; padding: 9.144px 13.716px; font-size: 12.573px; line-height: 12.573px; border-top-left-radius: 12px; border-top-right-radius: 12px; justify-content: space-between; display: flex;">
+<div class="md-code-block-infostring"></div>
+<div class="md-code-block-action" style="align-items: center; display: flex;">
+<div class="ds-markdown-code-copy-button" style="background-color: rgba(255, 255, 255, 0); color: inherit; cursor: pointer; border: none; margin: 0px; padding: 0px;">Copy</div>
+</div>
+</div>
+</div>
+<pre style="font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; overflow: auto; padding: 9.144px 13.716px; text-wrap-mode: wrap; word-break: break-all; margin: 0px !important;">Q = xW_Q, K = xW_K, V = xW_V</pre>
+</div>
+<p style="margin-top: 4px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;">(where W_Q, W_K, W_V are learned weight matrices)</p>
+</li>
+<li style="margin-top: 4px;">
+<p style="margin: 0px 0px 4px; font-size: 16.002px; line-height: 28.575px;"><strong>Attention Scores</strong>&nbsp;(how much each word attends to others):</p>
+<div class="md-code-block md-code-block-dark" style="--ds-md-code-block-border-color: rgb(255 255 255); --ds-md-code-block-banner-wrap-background-color: #292a2d; --ds-md-code-banner-background-color: #404045; color: #ffffff; background: #181d28; --ds-md-code-block-border-radius: 12px; --ds-md-code-block-font-size: calc(1.143*11px); border-radius: 12px; font-size: 12.573px; line-height: 20.1168px; margin-bottom: 11.43px;">
+<div class="md-code-block-banner-wrap" style="background-color: #ffffff !important; position: sticky; top: 0px;">
+<div class="md-code-block-banner" style="background: none 0% 0% / auto repeat scroll padding-box border-box #404045; padding: 9.144px 13.716px; font-size: 12.573px; line-height: 12.573px; border-top-left-radius: 12px; border-top-right-radius: 12px; justify-content: space-between; display: flex;">
+<div class="md-code-block-infostring"></div>
+<div class="md-code-block-action" style="align-items: center; display: flex;">
+<div class="ds-markdown-code-copy-button" style="background-color: rgba(255, 255, 255, 0); color: inherit; cursor: pointer; border: none; margin: 0px; padding: 0px;">Copy</div>
+</div>
+</div>
+</div>
+<pre style="font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; overflow: auto; padding: 9.144px 13.716px; text-wrap-mode: wrap; word-break: break-all; margin: 0px !important;">Attention(Q,K,V) = softmax(QK^T/&radic;d_k)V</pre>
+</div>
+<ul style="margin: 4px 0px 0px; padding-left: 27.432px;">
+<li>
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;"><code style="font-size: 0.875em; font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; background-color: #ececec; border-radius: 4px; padding: 0.15rem 0.3rem;">QK^T</code>&nbsp;computes pairwise word relevance</p>
+</li>
+<li style="margin-top: 4px;">
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;"><code style="font-size: 0.875em; font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; background-color: #ececec; border-radius: 4px; padding: 0.15rem 0.3rem;">&radic;d_k</code>&nbsp;(dimension of K) scales values for stable gradients</p>
+</li>
+<li style="margin-top: 4px;">
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;">Softmax converts scores to probabilities</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 style="font-weight: 500; font-size: 16.002px; line-height: 28.575px; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>(3) Multi-Head Attention</strong></h4>
+<ul style="margin: 13.716px 0px; padding-left: 27.432px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif; font-size: 16.002px;">
+<li>
+<p style="margin: 0px 0px 4px; font-size: 16.002px; line-height: 28.575px;">Runs multiple attention heads in parallel (e.g., 12 heads in GPT-3), each learning different relationships:</p>
+<div class="md-code-block md-code-block-dark" style="--ds-md-code-block-border-color: rgb(255 255 255); --ds-md-code-block-banner-wrap-background-color: #292a2d; --ds-md-code-banner-background-color: #404045; color: #ffffff; background: #181d28; --ds-md-code-block-border-radius: 12px; --ds-md-code-block-font-size: calc(1.143*11px); border-radius: 12px; font-size: 12.573px; line-height: 20.1168px; margin-bottom: 11.43px;">
+<div class="md-code-block-banner-wrap" style="background-color: #ffffff !important; position: sticky; top: 0px;">
+<div class="md-code-block-banner" style="background: none 0% 0% / auto repeat scroll padding-box border-box #404045; padding: 9.144px 13.716px; font-size: 12.573px; line-height: 12.573px; border-top-left-radius: 12px; border-top-right-radius: 12px; justify-content: space-between; display: flex;">
+<div class="md-code-block-infostring"></div>
+<div class="md-code-block-action" style="align-items: center; display: flex;">
+<div class="ds-markdown-code-copy-button" style="background-color: rgba(255, 255, 255, 0); color: inherit; cursor: pointer; border: none; margin: 0px; padding: 0px;">Copy</div>
+</div>
+</div>
+</div>
+<pre style="font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; overflow: auto; padding: 9.144px 13.716px; text-wrap-mode: wrap; word-break: break-all; margin: 0px !important;">MultiHead(Q,K,V) = Concat(head_1,...,head_h)W_O</pre>
+</div>
+<p style="margin-top: 4px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;">where each&nbsp;<code style="font-size: 0.875em; font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; background-color: #ececec; border-radius: 4px; padding: 0.15rem 0.3rem;">head_i = Attention(QW_Q^i, KW_K^i, VW_V^i)</code></p>
+</li>
+</ul>
+<h4 style="font-weight: 500; font-size: 16.002px; line-height: 28.575px; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>(4) Feed-Forward Network</strong></h4>
+<p style="margin: 13.716px 0px; font-size: 16.002px; line-height: 28.575px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;">After attention, each position passes through:</p>
+<div class="md-code-block md-code-block-dark" style="--ds-md-code-block-border-color: rgb(255 255 255); --ds-md-code-block-banner-wrap-background-color: #292a2d; --ds-md-code-banner-background-color: #404045; color: #ffffff; background: #181d28; --ds-md-code-block-border-radius: 12px; --ds-md-code-block-font-size: calc(1.143*11px); border-radius: 12px; font-size: 12.573px; line-height: 20.1168px; margin-bottom: 11.43px; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;">
+<div class="md-code-block-banner-wrap" style="background-color: #ffffff !important; position: sticky; top: 0px;">
+<div class="md-code-block-banner" style="background: none 0% 0% / auto repeat scroll padding-box border-box #404045; padding: 9.144px 13.716px; font-size: 12.573px; line-height: 12.573px; border-top-left-radius: 12px; border-top-right-radius: 12px; justify-content: space-between; display: flex;">
+<div class="md-code-block-infostring"></div>
+<div class="md-code-block-action" style="align-items: center; display: flex;">
+<div class="ds-markdown-code-copy-button" style="background-color: rgba(255, 255, 255, 0); color: inherit; cursor: pointer; border: none; margin: 0px; padding: 0px;">Copy</div>
+</div>
+</div>
+</div>
+<pre style="font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; overflow: auto; padding: 9.144px 13.716px; text-wrap-mode: wrap; word-break: break-all; margin: 0px !important;">FFN(x) = max(0, xW_1 + b_1)W_2 + b_2</pre>
+</div>
+<p style="margin: 13.716px 0px; font-size: 16.002px; line-height: 28.575px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;">(where W_1, W_2 are learned matrices)</p>
+<h4 style="font-weight: 500; font-size: 16.002px; line-height: 28.575px; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>(5) Layer Normalization &amp; Residual Connections</strong></h4>
+<p style="margin: 13.716px 0px; font-size: 16.002px; line-height: 28.575px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;">Critical for training deep networks:</p>
+<div class="md-code-block md-code-block-dark" style="--ds-md-code-block-border-color: rgb(255 255 255); --ds-md-code-block-banner-wrap-background-color: #292a2d; --ds-md-code-banner-background-color: #404045; color: #ffffff; background: #181d28; --ds-md-code-block-border-radius: 12px; --ds-md-code-block-font-size: calc(1.143*11px); border-radius: 12px; font-size: 12.573px; line-height: 20.1168px; margin-bottom: 11.43px; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;">
+<div class="md-code-block-banner-wrap" style="background-color: #ffffff !important; position: sticky; top: 0px;">
+<div class="md-code-block-banner" style="background: none 0% 0% / auto repeat scroll padding-box border-box #404045; padding: 9.144px 13.716px; font-size: 12.573px; line-height: 12.573px; border-top-left-radius: 12px; border-top-right-radius: 12px; justify-content: space-between; display: flex;">
+<div class="md-code-block-infostring"></div>
+<div class="md-code-block-action" style="align-items: center; display: flex;">
+<div class="ds-markdown-code-copy-button" style="background-color: rgba(255, 255, 255, 0); color: inherit; cursor: pointer; border: none; margin: 0px; padding: 0px;">Copy</div>
+</div>
+</div>
+</div>
+<pre style="font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; overflow: auto; padding: 9.144px 13.716px; text-wrap-mode: wrap; word-break: break-all; margin: 0px !important;">LayerNorm(x + Sublayer(x))</pre>
+</div>
+<ul style="margin: 13.716px 0px; padding-left: 27.432px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif; font-size: 16.002px;">
+<li>
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;">Residual connections help gradients flow</p>
+</li>
+<li style="margin-top: 4px;">
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;">LayerNorm stabilizes activations</p>
+</li>
+</ul>
+<hr />
+<h2 style="font-weight: 500; font-size: 22.86px; line-height: 1.5; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>2. How RLHF Fine-Tunes Models Like ChatGPT</strong></h2>
+<p style="margin: 13.716px 0px; font-size: 16.002px; line-height: 28.575px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;">Reinforcement Learning from Human Feedback (RLHF) is what makes ChatGPT helpful and aligned. Here's how it works:</p>
+<h3 style="font-weight: 500; font-size: 18.288px; line-height: 1.5; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>Step 1: Supervised Fine-Tuning (SFT)</strong></h3>
+<ul style="margin: 13.716px 0px; padding-left: 27.432px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif; font-size: 16.002px;">
+<li>
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;">Take pre-trained LLM (e.g., GPT-4 base model)</p>
+</li>
+<li style="margin-top: 4px;">
+<p style="margin: 0px 0px 4px; font-size: 16.002px; line-height: 28.575px;">Fine-tune on high-quality human demonstrations:</p>
+<div class="md-code-block md-code-block-dark" style="--ds-md-code-block-border-color: rgb(255 255 255); --ds-md-code-block-banner-wrap-background-color: #292a2d; --ds-md-code-banner-background-color: #404045; color: #ffffff; background: #181d28; --ds-md-code-block-border-radius: 12px; --ds-md-code-block-font-size: calc(1.143*11px); border-radius: 12px; font-size: 12.573px; line-height: 20.1168px; margin-bottom: 0px;">
+<div class="md-code-block-banner-wrap" style="background-color: #ffffff !important; position: sticky; top: 0px;">
+<div class="md-code-block-banner" style="background: none 0% 0% / auto repeat scroll padding-box border-box #404045; padding: 9.144px 13.716px; font-size: 12.573px; line-height: 12.573px; border-top-left-radius: 12px; border-top-right-radius: 12px; justify-content: space-between; display: flex;">
+<div class="md-code-block-infostring"></div>
+<div class="md-code-block-action" style="align-items: center; display: flex;">
+<div class="ds-markdown-code-copy-button" style="background-color: rgba(255, 255, 255, 0); color: inherit; cursor: pointer; border: none; margin: 0px; padding: 0px;">Copy</div>
+</div>
+</div>
+</div>
+<pre style="font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; overflow: auto; padding: 9.144px 13.716px; text-wrap-mode: wrap; word-break: break-all; margin: 0px !important;">Loss = -&Sigma; log P(y|x)  // maximize likelihood of human responses</pre>
+</div>
+</li>
+</ul>
+<h3 style="font-weight: 500; font-size: 18.288px; line-height: 1.5; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>Step 2: Reward Modeling</strong></h3>
+<ol start="1" style="margin: 13.716px 0px; padding-left: 27.432px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif; font-size: 16.002px;">
+<li>
+<p style="margin: 0px 0px 4px; font-size: 16.002px; line-height: 28.575px;">Collect comparison data where humans rank multiple model responses:</p>
+<div class="md-code-block md-code-block-dark" style="--ds-md-code-block-border-color: rgb(255 255 255); --ds-md-code-block-banner-wrap-background-color: #292a2d; --ds-md-code-banner-background-color: #404045; color: #ffffff; background: #181d28; --ds-md-code-block-border-radius: 12px; --ds-md-code-block-font-size: calc(1.143*11px); border-radius: 12px; font-size: 12.573px; line-height: 20.1168px; margin-bottom: 0px;">
+<div class="md-code-block-banner-wrap" style="background-color: #ffffff !important; position: sticky; top: 0px;">
+<div class="md-code-block-banner" style="background: none 0% 0% / auto repeat scroll padding-box border-box #404045; padding: 9.144px 13.716px; font-size: 12.573px; line-height: 12.573px; border-top-left-radius: 12px; border-top-right-radius: 12px; justify-content: space-between; display: flex;">
+<div class="md-code-block-infostring"></div>
+<div class="md-code-block-action" style="align-items: center; display: flex;">
+<div class="ds-markdown-code-copy-button" style="background-color: rgba(255, 255, 255, 0); color: inherit; cursor: pointer; border: none; margin: 0px; padding: 0px;">Copy</div>
+</div>
+</div>
+</div>
+<pre style="font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; overflow: auto; padding: 9.144px 13.716px; text-wrap-mode: wrap; word-break: break-all; margin: 0px !important;">Preferred: "The capital of France is Paris."
+Dispreferred: "France's capital? Maybe London?"</pre>
+</div>
+</li>
+<li style="margin-top: 4px;">
+<p style="margin: 0px 0px 4px; font-size: 16.002px; line-height: 28.575px;">Train a&nbsp;<strong>reward model (RM)</strong>&nbsp;to predict human preferences:</p>
+<div class="md-code-block md-code-block-dark" style="--ds-md-code-block-border-color: rgb(255 255 255); --ds-md-code-block-banner-wrap-background-color: #292a2d; --ds-md-code-banner-background-color: #404045; color: #ffffff; background: #181d28; --ds-md-code-block-border-radius: 12px; --ds-md-code-block-font-size: calc(1.143*11px); border-radius: 12px; font-size: 12.573px; line-height: 20.1168px; margin-bottom: 11.43px;">
+<div class="md-code-block-banner-wrap" style="background-color: #ffffff !important; position: sticky; top: 0px;">
+<div class="md-code-block-banner" style="background: none 0% 0% / auto repeat scroll padding-box border-box #404045; padding: 9.144px 13.716px; font-size: 12.573px; line-height: 12.573px; border-top-left-radius: 12px; border-top-right-radius: 12px; justify-content: space-between; display: flex;">
+<div class="md-code-block-infostring"></div>
+<div class="md-code-block-action" style="align-items: center; display: flex;">
+<div class="ds-markdown-code-copy-button" style="background-color: rgba(255, 255, 255, 0); color: inherit; cursor: pointer; border: none; margin: 0px; padding: 0px;">Copy</div>
+</div>
+</div>
+</div>
+<pre style="font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; overflow: auto; padding: 9.144px 13.716px; text-wrap-mode: wrap; word-break: break-all; margin: 0px !important;">Loss = -log(&sigma;(r(x,y_w) - r(x,y_l)))</pre>
+</div>
+<ul style="margin: 4px 0px 0px; padding-left: 27.432px;">
+<li>
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;"><code style="font-size: 0.875em; font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; background-color: #ececec; border-radius: 4px; padding: 0.15rem 0.3rem;">r(x,y)</code>&nbsp;= reward for prompt x and response y</p>
+</li>
+<li style="margin-top: 4px;">
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;"><code style="font-size: 0.875em; font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; background-color: #ececec; border-radius: 4px; padding: 0.15rem 0.3rem;">y_w</code>&nbsp;= preferred response,&nbsp;<code style="font-size: 0.875em; font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; background-color: #ececec; border-radius: 4px; padding: 0.15rem 0.3rem;">y_l</code>&nbsp;= dispreferred</p>
+</li>
+<li style="margin-top: 4px;">
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;">&sigma; = sigmoid function</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 style="font-weight: 500; font-size: 18.288px; line-height: 1.5; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>Step 3: Reinforcement Learning (PPO)</strong></h3>
+<p style="margin: 13.716px 0px; font-size: 16.002px; line-height: 28.575px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;">Use Proximal Policy Optimization to align the LLM with human preferences:</p>
+<ol start="1" style="margin: 13.716px 0px; padding-left: 27.432px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif; font-size: 16.002px;">
+<li>
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;">Generate responses from current policy &pi;</p>
+</li>
+<li style="margin-top: 4px;">
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;">Compute rewards using RM:&nbsp;<code style="font-size: 0.875em; font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; background-color: #ececec; border-radius: 4px; padding: 0.15rem 0.3rem;">r(x,y)</code></p>
+</li>
+<li style="margin-top: 4px;">
+<p style="margin: 0px 0px 4px; font-size: 16.002px; line-height: 28.575px;">Optimize with KL penalty to prevent over-optimization:</p>
+<div class="md-code-block md-code-block-dark" style="--ds-md-code-block-border-color: rgb(255 255 255); --ds-md-code-block-banner-wrap-background-color: #292a2d; --ds-md-code-banner-background-color: #404045; color: #ffffff; background: #181d28; --ds-md-code-block-border-radius: 12px; --ds-md-code-block-font-size: calc(1.143*11px); border-radius: 12px; font-size: 12.573px; line-height: 20.1168px; margin-bottom: 11.43px;">
+<div class="md-code-block-banner-wrap" style="background-color: #ffffff !important; position: sticky; top: 0px;">
+<div class="md-code-block-banner" style="background: none 0% 0% / auto repeat scroll padding-box border-box #404045; padding: 9.144px 13.716px; font-size: 12.573px; line-height: 12.573px; border-top-left-radius: 12px; border-top-right-radius: 12px; justify-content: space-between; display: flex;">
+<div class="md-code-block-infostring"></div>
+<div class="md-code-block-action" style="align-items: center; display: flex;">
+<div class="ds-markdown-code-copy-button" style="background-color: rgba(255, 255, 255, 0); color: inherit; cursor: pointer; border: none; margin: 0px; padding: 0px;">Copy</div>
+</div>
+</div>
+</div>
+<pre style="font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; overflow: auto; padding: 9.144px 13.716px; text-wrap-mode: wrap; word-break: break-all; margin: 0px !important;">Objective = E[r(x,y) - &beta; KL(&pi;||&pi;_SFT)]</pre>
+</div>
+<ul style="margin: 4px 0px 0px; padding-left: 27.432px;">
+<li>
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;">&beta; controls how much we penalize deviation from SFT model</p>
+</li>
+<li style="margin-top: 4px;">
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;">Updated via gradient ascent</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 style="font-weight: 500; font-size: 18.288px; line-height: 1.5; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>Why RLHF Matters</strong></h3>
+<ul style="margin: 13.716px 0px; padding-left: 27.432px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif; font-size: 16.002px;">
+<li>
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;">Turns raw next-word prediction into helpful dialogue</p>
+</li>
+<li style="margin-top: 4px;">
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;">Suppresses harmful/untruitful outputs</p>
+</li>
+<li style="margin-top: 4px;">
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;">Enables nuanced behavior like admitting uncertainty</p>
+</li>
+</ul>
+<hr />
+<h2 style="font-weight: 500; font-size: 22.86px; line-height: 1.5; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>Key Mathematical Insights</strong></h2>
+<table style="border-collapse: collapse; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif; font-size: 16.002px;">
+<thead>
+<tr><th style="padding: 6.858px 13.716px 6.858px 0px; border-bottom: 1px solid #a3a3a3; border-top: 1px solid #a3a3a3; text-align: left;">Concept</th><th style="padding: 6.858px 13.716px; border-bottom: 1px solid #a3a3a3; border-top: 1px solid #a3a3a3; text-align: left;">Key Equations</th><th style="padding: 6.858px 13.716px; border-bottom: 1px solid #a3a3a3; border-top: 1px solid #a3a3a3; text-align: left;">Purpose</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 6.858px 13.716px 6.858px 0px; border-bottom: 1px solid #a3a3a3;"><strong>Self-Attention</strong></td>
+<td style="padding: 6.858px 13.716px; border-bottom: 1px solid #a3a3a3;"><code style="font-size: 0.875em; font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; background-color: #ececec; border-radius: 4px; padding: 0.15rem 0.3rem;">softmax(QK^T/&radic;d_k)V</code></td>
+<td style="padding: 6.858px 13.716px; border-bottom: 1px solid #a3a3a3;">Compute word relationships</td>
+</tr>
+<tr>
+<td style="padding: 6.858px 13.716px 6.858px 0px; border-bottom: 1px solid #a3a3a3;"><strong>PPO Objective</strong></td>
+<td style="padding: 6.858px 13.716px; border-bottom: 1px solid #a3a3a3;">`E[r(x,y) - &beta; KL(&pi;</td>
+<td style="padding: 6.858px 13.716px; border-bottom: 1px solid #a3a3a3;"></td>
+<td style="padding: 6.858px 13.716px; border-bottom: 1px solid #a3a3a3;">&pi;_SFT)]`</td>
+<td style="padding: 6.858px 13.716px; border-bottom: 1px solid #a3a3a3;">Align model with human preferences</td>
+</tr>
+<tr>
+<td style="padding: 6.858px 13.716px 6.858px 0px; border-bottom: 1px solid #a3a3a3;"><strong>Reward Modeling</strong></td>
+<td style="padding: 6.858px 13.716px; border-bottom: 1px solid #a3a3a3;"><code style="font-size: 0.875em; font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; background-color: #ececec; border-radius: 4px; padding: 0.15rem 0.3rem;">-log(&sigma;(r(x,y_w)-r(x,y_l)))</code></td>
+<td style="padding: 6.858px 13.716px; border-bottom: 1px solid #a3a3a3;">Learn human preference rankings</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 style="font-weight: 500; font-size: 22.86px; line-height: 1.5; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>Current Frontiers</strong></h2>
+<ul style="margin: 13.716px 0px; padding-left: 27.432px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif; font-size: 16.002px;">
+<li>
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;"><strong>Mixture of Experts:</strong>&nbsp;Only activate parts of model per input (e.g., GPT-4 rumored to use this)</p>
+</li>
+<li style="margin-top: 4px;">
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;"><strong>Speculative Decoding:</strong>&nbsp;Faster generation by "drafting" multiple tokens</p>
+</li>
+<li style="margin-top: 4px;">
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;"><strong>Constitutional AI:</strong>&nbsp;Alternative to RLHF using self-critique</p>
+</li>
+</ul>
+        <br>
+   
+        <a href="https://stackboard.one">Try stackboard</a>
+      </div>
+
+    </main>
+  </body>
+</html>
+
+
